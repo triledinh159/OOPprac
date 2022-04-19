@@ -39,6 +39,7 @@ class SINGER  {
 	char MUSICKIND[100];
 	int SOLDDISK;
 	int SHOW;
+	int GAMESHOW;
 public:
 	int SALARY;
 	void inputSinger();
