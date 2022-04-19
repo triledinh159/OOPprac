@@ -37,15 +37,19 @@ void ACTOR::inputActor() {
 void SINGER::inputSinger() {
 		cout << "Sold disks: ";
 		cin >> SOLDDISK;
+		cout << "Insert number of show(s): ";
+		cin >> SHOW;
 		cout << "Insert musickind: "; cin.ignore(); cin.getline(MUSICKIND, 100);
 		cout << "Insert workage: "; cin >> WORKAGE;
 		if (SOLDDISK < 100) {
 			cout << "Basic Singer\n";		
-			SALARY = 3000000 + 500000 * WORKAGE + 1000*SOLDDISK;
+			SALARY = 3000000 + 500000 * WORKAGE + 1000*SOLDDISK + 200000*SHOW;
 		}
 		else {
+			cout << "Insert number of gameshow(s): ";
+			cin >> GAMESHOW;
 			cout << "Famous Singer\n";
-			SALARY = 5000000 + 500000 * WORKAGE + 1200*SOLDDISK;
+			SALARY = 5000000 + 500000 * WORKAGE + 1200*SOLDDISK +500000*(SHOW+GAMESHOW);
 		}
 }
 void STUDENT::inputStudent() {
